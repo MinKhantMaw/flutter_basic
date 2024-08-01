@@ -4,9 +4,7 @@ import 'package:flutter/material.dart';
 import 'home/home.dart';
 
 void main() {
-  runApp(const MaterialApp(
-      home: Home()
-  ));
+  runApp(const MaterialApp(home: Home()));
 }
 
 class Sanbox extends StatelessWidget {
@@ -14,42 +12,35 @@ class Sanbox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      appBar: AppBar(
-        title: const Text('Sandbox'),
-        backgroundColor: Colors.grey,
-      ),
-      body:  Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            width: 100,
-            color: Colors.red,
-            child: Text('one'),
-            alignment: Alignment.center,
-          ),
-          Container(
-            width: 200,
-            color: Colors.green,
-            child: Text('two'),
-            alignment: Alignment.center,
-          ),
-          Container(
-            width: 300,
-            color: Colors.blue,
-            child: Text('three'),
-            alignment: Alignment.center,
-          ),
-          Container(
-            width: 400,
-            color: Colors.greenAccent,
-            child: Text('four'),
-            alignment: Alignment.center,
-          ),
-        ],
-      )
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Sandbox'),
+          backgroundColor: Colors.grey,
+        ),
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+              height: 100,
+              color: Colors.red,
+              alignment: Alignment.center,
+              child: const Text('One'),
+            ),
+            Container(
+              height: 200,
+              color: Colors.blue,
+              alignment: Alignment.center,
+              child: const Text('One'),
+            ),
+            Container(
+              height: 300,
+              color: Colors.green,
+              alignment: Alignment.center,
+              child: const Text('One'),
+            ),
+          ],
+        )
     );
   }
 }
-
