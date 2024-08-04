@@ -21,7 +21,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
 
   void increaseSugars() {
     setState(() {
-      sugars = sugars < 5 ? sugars + 1: 1;
+      sugars = sugars < 5 ? sugars + 1: 0;
     });
 
   }
@@ -33,7 +33,8 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
         Row(
           children: [
             const Text('Strength: '),
-             Text('$strength'),
+             // Text('$strength'),
+            for(int i = 0; i < strength; i++)
             Image.asset('assets/img/coffee1.jpg',
             width: 25,
             color: Colors.brown[100],
@@ -53,7 +54,9 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
         Row(
           children: [
             const Text('Sugars: '),
-             Text('$sugars'),
+            if(sugars == 0 )
+              const Text("No Sugars ...."),
+            for(int i = 0; i < sugars; i++)
             Image.asset('assets/img/coffee2.jpg',
                 width: 25),
             const Expanded(child:  SizedBox()),
